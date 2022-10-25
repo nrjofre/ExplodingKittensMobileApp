@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.example.explodingkittensapp.ui.view.signin.SigninFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.explodingkittensapp.ui.view.signin.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.example.explodingkittensapp.ui.view.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_newGameFragment"
+            app:destination="@id/newGameFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_joinGameFragment"
+            app:destination="@id/joinGameFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_myGamesFragment"
+            app:destination="@id/myGamesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGameFragment"
+        android:name="com.example.explodingkittensapp.ui.view.newgame.NewGameFragment"
+        android:label="fragment_new_game"
+        tools:layout="@layout/fragment_new_game">
+        <action
+            android:id="@+id/action_newGameFragment_to_homeScreenFragment"
+            app:destination="@+id/homeScreenFragment"/>
+        <action
+            android:id="@+id/action_newGameFragment_to_friendsFragment"
+            app:destination="@+id/friendsFragment"/>
+        <action
+            android:id="@+id/action_newGameFragment_to_newGameDetails"
+            app:destination="@id/newGameDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.explodingkittensapp.ui.view.signin.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.explodingkittensapp.ui.view.friend.FriendFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends" >
+        <action
+            android:id="@+id/action_friendsFragment_to_friendDetails"
+            app:destination="@id/friendDetails" />
+        <action
+            android:id="@+id/action_friendsFragment_to_addFriendsFragment"
+            app:destination="@id/addFriendsFragment" />
+        <action
+            android:id="@+id/action_friendsFragment_to_friendsRequestsFragment"
+            app:destination="@id/friendsRequestsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinGameFragment"
+        android:name="com.example.explodingkittensapp.ui.view.joingame.JoinGameFragment"
+        android:label="fragment_join_game"
+        tools:layout="@layout/fragment_join_game" >
+        <action
+            android:id="@+id/action_joinGameFragment_to_joinGameDetails"
+            app:destination="@id/joinGameDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/myGamesFragment"
+        android:name="com.example.explodingkittensapp.ui.view.mygames.MyGamesFragment"
+        android:label="fragment_my_games"
+        tools:layout="@layout/fragment_my_games" >
+        <action
+            android:id="@+id/action_myGamesFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendDetails"
+        android:name="com.example.explodingkittensapp.ui.view.friend.FriendDetails"
+        tools:layout="@layout/friend_details_fragment" >
+        <argument
+            android:name="friendId"
+            android:defaultValue="Friend"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFriendsFragment"
+        android:name="com.example.explodingkittensapp.ui.view.addfriends.AddFriendsFragment"
+        android:label="fragment_add_friends"
+        tools:layout="@layout/fragment_add_friends" >
+        <action
+            android:id="@+id/action_addFriendsFragment_to_addFriendsDetails"
+            app:destination="@id/addFriendsDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendsRequestsFragment"
+        android:name="com.example.explodingkittensapp.ui.view.friendsrequests.FriendsRequestsFragment"
+        android:label="fragment_friends_requests"
+        tools:layout="@layout/fragment_friends_requests" >
+        <action
+            android:id="@+id/action_friendsRequestsFragment_to_friendsRequestsDetails"
+            app:destination="@id/friendsRequestsDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFriendsDetails"
+        android:name="com.example.explodingkittensapp.ui.view.addfriends.AddFriendsDetails"
+        tools:layout="@layout/add_friends_details_fragment" >
+        <argument
+            android:name="addFriendsId"
+            android:defaultValue="AddFriends"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendsRequestsDetails"
+        android:name="com.example.explodingkittensapp.ui.view.friendsrequests.FriendsRequestsDetails"
+        tools:layout="@layout/friends_requests_details_fragment" >
+        <argument
+            android:name="friendsRequestsId"
+            android:defaultValue="FriendsRequests"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinGameDetails"
+        android:name="com.example.explodingkittensapp.ui.view.joingame.JoinGameDetails"
+        android:label="join_game_details_fragment"
+        tools:layout="@layout/join_game_details_fragment" >
+        <argument
+            android:name="joinGameId"
+            android:defaultValue="JoinGame"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGameDetails"
+        android:name="com.example.explodingkittensapp.ui.view.newgame.NewGameDetails"
+        android:label="new_game_details_fragment"
+        tools:layout="@layout/new_game_details_fragment" >
+        <argument
+            android:name="newGameId"
+            android:defaultValue="NewGame"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.explodingkittensapp.ui.view.game.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" />
+</navigation>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.HomeScreenFragment">
+
+    <Button
+        android:id="@+id/joingamebtn"
+        android:layout_width="241dp"
+        android:layout_height="77dp"
+        android:text="Game Invites"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/newgamebtn"
+        app:layout_constraintBottom_toTopOf="@+id/mygamesbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="289dp" />
+
+    <Button
+        android:id="@+id/newgamebtn"
+        android:layout_width="241dp"
+        android:layout_height="77dp"
+        android:text="Create Game"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/joingamebtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/friendsbtn" />
+
+    <Button
+        android:id="@+id/mygamesbtn"
+        android:layout_width="241dp"
+        android:layout_height="77dp"
+        android:text="My Games"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joingamebtn" />
+
+    <Button
+        android:id="@+id/profilebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Profile"
+        app:layout_constraintEnd_toStartOf="@+id/friendsbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logoutbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/friendsbtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/friendsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Friends"
+        app:layout_constraintEnd_toStartOf="@+id/logoutbtn"
+        app:layout_constraintStart_toEndOf="@+id/profilebtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
